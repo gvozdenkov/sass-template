@@ -1,0 +1,13 @@
+@use 'sass:map';
+
+@use 'colors' as *;
+
+@function clr($color...) {
+  $color: map.get($colors, $color...);
+
+  @if ($color != null) {
+    @return $color;
+  } @else {
+    @error 'This is not a key in a $colors map (/abstracts/_colors.scss)';
+  }
+}
