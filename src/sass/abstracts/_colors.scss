@@ -1,17 +1,9 @@
 $colors: (
-  'primary': (
-    100: lightblue,
-    400: blue,
-    900: darkblue,
-  ),
-  'secondary': (
-    100: pink,
-    400: red,
-    900: darkred,
+  'neutral': (
+    100: #f8f8f8,
+    900: #1f3049,
   ),
   'accent': (
-    100: rgb(252, 252, 181),
-    400: rgb(209, 209, 43),
-    900: rgb(180, 114, 14),
+    400: #1055d4,
   ),
 );
