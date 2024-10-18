@@ -4,10 +4,74 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./sass/main.scss" />
     <title>SASS template</title>
   </head>
   <body>
-    <h1>hello</h1>
+    <header class="section">
+      <div class="container">
+        <h1 class="fs-900 fw-extra-bold text-center">Simple Storybook</h1>
+      </div>
+    </header>
+    <section class="section">
+      <h2 class="fs-800 fw-medium text-center mb-24">Buttons</h2>
+      <div class="container">
+        <h2 class="fs-600 mb-12">Primary</h2>
+        <div class="grid-auto-fit" style="--grid-gap: 0.5rem">
+          <button class="button button_icon_check">
+            <span class="button__content">Button</span>
+          </button>
+
+          <button class="button"><span class="button__content">Button</span></button>
+
+          <button class="button button_icon_check">
+            <span class="button__content"></span>
+          </button>
+
+          <button class="button button_type_confirm button_icon_check">
+            <span class="button__content"></span>
+          </button>
+
+          <button class="button button_icon_check" disabled>
+            <span class="button__content">Button</span>
+          </button>
+
+          <button class="button" disabled>
+            <span class="button__content">Button</span>
+          </button>
+
+          <button class="button button_icon_check" disabled>
+            <span class="button__content"></span>
+          </button>
+
+          <button class="button button_type_cancel button_icon_cancel">
+            <span class="button__content"></span>
+          </button>
+        </div>
+        <h2 class="fs-600 mb-12">Outline</h2>
+        <div class="grid-auto-fit" style="--grid-gap: 0.5rem">
+          <button class="button button_type_outline button_icon_cancel">
+            <span class="button__content">Button</span>
+          </button>
+
+          <button class="button button_type_outline">
+            <span class="button__content">Button</span>
+          </button>
+
+          <button class="button button_type_outline button_icon_cancel">
+            <span class="button__content"></span>
+          </button>
+          <button class="button button_type_outline button_icon_cancel" disabled>
+            <span class="button__content">Button</span>
+          </button>
+        </div>
+      </div>
+    </section>
   </body>
 </html>

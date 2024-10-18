@@ -1,0 +1,91 @@
+@use '../abstracts/' as *;
+
+.button {
+  --max-height: 38px;
+  --bg-color: #{$button-primary-background-color};
+  --color: #{$button-primary-color};
+  --border-color: transparent;
+  --border-size: #{$button-border-size};
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+
+  text-decoration: $button-text-decoration;
+  text-transform: $button-text-transform;
+  line-height: 1.2;
+
+  border: var(--border-size) solid;
+  border-color: var(--border-color);
+  border-radius: $size-3;
+
+  font-size: var(--fs-400);
+  font-weight: $fw-600;
+
+  color: var(--color);
+  background-color: var(--bg-color);
+
+  height: var(--max-height);
+
+  transition: ease-out 200ms;
+
+  &:is(:hover, :focus) {
+    --bg-color: #{$button-primary-background-color-hover};
+  }
+
+  &_type_confirm {
+    --bg-color: #{$button-confirm-background-color};
+
+    &:is(:hover, :focus) {
+      --bg-color: #{$button-confirm-background-color-hover};
+    }
+  }
+
+  &_type_cancel {
+    --bg-color: #{$button-cancel-background-color};
+
+    &:is(:hover, :focus) {
+      --bg-color: #{$button-cancel-background-color-hover};
+    }
+  }
+
+  // &_type_outline {
+  //   --bg-color: transparent;
+  //   --color: #{$clr-btn-text-ouline};
+  //   --border-color: #{$clr-btn-outline-border};
+
+  //   & > .button__content::before {
+  //     background-color: $clr-btn-text-ouline;
+  //   }
+
+  //   &:is(:hover, :focus) {
+  //     --color: #{$clr-btn-text-ouline-hover};
+  //     --border-color: #{$clr-btn-ouline-hover};
+  //     --bg-color: transparent;
+
+  //     & > .button__content::before {
+  //       background-color: $clr-btn-icon-ouline-hover;
+  //     }
+  //   }
+
+  //   &:disabled {
+  //     border-color: $clr-btn-outline-border-disabled;
+  //   }
+  // }
+
+  &:disabled {
+    --bg-color: #{$button-primary-background-color-disabled};
+    --color: #{$button-color-disabled};
+    cursor: not-allowed;
+  }
+
+  @include mq(medium) {
+    --max-height: 44px;
+  }
+
+  @include mq(large) {
+    --max-height: 50px;
+  }
+}
