@@ -1,11 +1,7 @@
 @use '../abstracts/' as *;
 
 .section {
-  padding-block: $section-padding;
-}
-
-.hero-section {
-  padding-block: $hero-padding;
+  padding-block: $section-block-padding;
 }
 
 .mx-auto {

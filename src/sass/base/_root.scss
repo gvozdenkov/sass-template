@@ -1,0 +1,38 @@
+@use 'sass:map';
+@use '../abstracts/' as *;
+
+:root {
+  // Generate all colors custom props
+  @each $color, $shade-map in $colors {
+    @each $shade, $value in $shade-map {
+      --clr-#{$color}-#{$shade}: #{$value};
+    }
+  }
+
+  // Generate font sizes and line-height for all breakpoints
+  @each $screen-size, $size-map in $font-sizes {
+    @if ($screen-size == 'small') {
+      @each $size, $value in $size-map {
+        --fs-#{$size}: #{$value};
+
+        @if ($size == '800' or $size == '700' or $size == '600') {
+          --lh-#{$size}: 1.3;
+        } @else {
+          --lh-#{$size}: 1.2;
+        }
+      }
+    } @else {
+      @include mq($screen-size) {
+        @each $size, $value in $size-map {
+          --fs-#{$size}: #{$value};
+
+          @if ($size == '800' or $size == '700' or $size == '600') {
+            --lh-#{$size}: 1.3;
+          } @else {
+            --lh-#{$size}: 1.2;
+          }
+        }
+      }
+    }
+  }
+}

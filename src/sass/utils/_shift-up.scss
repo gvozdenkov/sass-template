@@ -1,5 +1,0 @@
-@use '../abstracts/' as *;
-
-.shift-up {
-  transform: translateY(calc($section-padding * -1.5));
-}
