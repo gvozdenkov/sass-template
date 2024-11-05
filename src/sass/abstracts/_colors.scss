@@ -24,7 +24,7 @@ $_clr-yellow-100: #fffbee;
 $_clr-purple-400: #8657e8;
 $_clr-purple-100: #f1eefc;
 
-$colors: (
+$light: (
   'neutral': (
     900: $_clr-black-900,
     600: $_clr-black-600,
@@ -36,6 +36,39 @@ $colors: (
     500: $_clr-blue-500,
     400: $_clr-blue-400,
     100: $_clr-blue-100,
+  ),
+  'danger': (
+    500: $_clr-red-500,
+    400: $_clr-red-400,
+    100: $_clr-red-100,
+  ),
+  'success': (
+    500: $_clr-green-500,
+    400: $_clr-green-400,
+    100: $_clr-green-100,
+  ),
+  'warning': (
+    400: $_clr-yellow-400,
+    100: $_clr-yellow-100,
+  ),
+  'decor': (
+    400: $_clr-purple-400,
+    100: $_clr-purple-100,
+  ),
+);
+
+$dark: (
+  'neutral': (
+    900: $_clr-white,
+    600: $_clr-black-200,
+    500: $_clr-black-500,
+    200: $_clr-black-600,
+    100: $_clr-black-900,
+  ),
+  'accent': (
+    500: $_clr-blue-500,
+    400: $_clr-blue-400,
+    100: $_clr-black-600,
   ),
   'danger': (
     500: $_clr-red-500,

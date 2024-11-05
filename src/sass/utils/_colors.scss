@@ -1,13 +1,13 @@
 @use '../abstracts/' as *;
 
-@each $color-name, $shade-map in $colors {
-  @each $shade-name, $shade-value in $shade-map {
-    .clr-#{$color-name}-#{$shade-name} {
-      color: $shade-value;
+@each $color, $shade-map in $active-theme {
+  @each $shade, $value in $shade-map {
+    .clr-#{$color}-#{$shade} {
+      color: var(--clr-#{$color}-#{$shade});
     }
 
-    .bg-#{$color-name}-#{$shade-name} {
-      background-color: $shade-value;
+    .bg-#{$color}-#{$shade} {
+      background-color: var(--clr-#{$color}-#{$shade});
     }
   }
 }
